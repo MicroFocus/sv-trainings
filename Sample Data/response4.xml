@@ -1,0 +1,70 @@
+<PortfolioSuggestion
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <KYC>
+    <Name>John</Name>
+    <Surname>Doe</Surname>
+    <Citizenship>Spain</Citizenship>
+    <CityOfResidence>Madrid</CityOfResidence>
+    <UniqueIdentifier>042-86-9760</UniqueIdentifier>
+  </KYC>
+  <SuggestedAssets>
+    <Asset>
+      <ISIN>XS1972547696</ISIN>
+      <Name>VOLKSWAGEN FINANCIAL SERVICES AG</Name>
+      <Type>Bond</Type>
+      <Units>7.69</Units>
+      <PriceInUSD>108.23</PriceInUSD>
+      <RiskScore>20</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:45:26</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>XC0009655157</ISIN>
+      <Name>Gold</Name>
+      <Type>Commodity</Type>
+      <Units>0.44</Units>
+      <PriceInUSD>1863.4448</PriceInUSD>
+      <RiskScore>3</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:45:26</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>US5949181045</ISIN>
+      <Name>Microsoft Corp.</Name>
+      <Type>Equity</Type>
+      <Units>4.71</Units>
+      <PriceInUSD>176.88</PriceInUSD>
+      <RiskScore>10</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:45:26</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>XS1492818866</ISIN>
+      <Name>European Investment Bank (EIB)</Name>
+      <Type>Bond</Type>
+      <Units>7.55</Units>
+      <PriceInUSD>110.29</PriceInUSD>
+      <RiskScore>7</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:45:26</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>DE0001135275</ISIN>
+      <Name>Deutschland, Bundesrepublik</Name>
+      <Type>Bond</Type>
+      <Units>4.81</Units>
+      <PriceInUSD>173.10</PriceInUSD>
+      <RiskScore>2</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:45:26</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>US4592001014</ISIN>
+      <Name>IBM Corp.</Name>
+      <Type>Equity</Type>
+      <Units>8.23</Units>
+      <PriceInUSD>101.15</PriceInUSD>
+      <RiskScore>20</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:45:26</MarketQuoteTime>
+    </Asset>
+  </SuggestedAssets>
+  <TotalValueInUSD>5000</TotalValueInUSD>
+  <Hash>38C7CC3807B5EA00C98AE334D4B6D78D738CED97</Hash>
+  <TransactionId>24615262805582</TransactionId>
+</PortfolioSuggestion>

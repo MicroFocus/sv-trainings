@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<vs:serviceDescription version="5.5.0.6315" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns0="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP" xmlns:ns1="http://hp.com/SOAQ/ServiceVirtualization/2019/RESPONSE_OVERRIDE" xmlns:ns2="http://hp.com/SOAQ/ServiceVirtualization/2010/BINARY" id="d51a16bf-5f60-4c32-b402-4872bfec7f1c" name="Checkup Service Description" description="Service Description for Checkup Service" protocol="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP/REST" xmlns:vs="http://hp.com/SOAQ/ServiceVirtualization/2010/">
+  <vs:requestSessionIdLocator state="Set">
+    <vs:part node="xmlns(ns0=http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP)xpath(ns0:HTTPInputParameters)" type="xmlns(ns0=http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP)xpath(ns0:HTTPInputParameters/type::*)" />
+    <vs:part node="ClientAddress" type="xmlns(ns0=http://www.w3.org/2001/XMLSchema)xpath(type::ns0:string)" definingType="xmlns(ns0=http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP)xpath(ns0:HTTPInputParameters/type::*)" />
+  </vs:requestSessionIdLocator>
+  <vs:metadata name="XML:LearnSchemaLocation" type="xs:boolean" value="false" />
+  <vs:metadata name="XML:PreserveXmlPrefixes" type="xs:boolean" value="true" />
+  <vs:schemata>
+    <xs:schema xmlns:vs="http://hp.com/SOAQ/ServiceVirtualization/2010/" xmlns:ns2="http://hp.com/SOAQ/ServiceVirtualization/2010/BINARY" xmlns:ns0="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP" xmlns:ns1="http://hp.com/SOAQ/ServiceVirtualization/2019/RESPONSE_OVERRIDE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" elementFormDefault="qualified" targetNamespace="http://hp.com/SOAQ/ServiceVirtualization/2010/BINARY">
+      <xs:element name="BinaryContent" nillable="true">
+        <xs:complexType>
+          <xs:all>
+            <xs:element default="" name="Data" type="xs:base64Binary" />
+            <xs:element name="Filename" type="xs:string" />
+            <xs:element name="Mimetype" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:vs="http://hp.com/SOAQ/ServiceVirtualization/2010/" xmlns:ns2="http://hp.com/SOAQ/ServiceVirtualization/2010/BINARY" xmlns:ns0="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP" xmlns:tns="http://hp.com/SOAQ/ServiceVirtualization/2011/JSON/Types" xmlns:ns1="http://hp.com/SOAQ/ServiceVirtualization/2019/RESPONSE_OVERRIDE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" elementFormDefault="qualified" targetNamespace="http://hp.com/SOAQ/ServiceVirtualization/2011/JSON/Types">
+      <xs:element name="JSONRequest" nillable="true" type="tns:JsonRequestType" />
+      <xs:element name="JSONResponse" nillable="true" type="tns:JsonResponseType" />
+      <xs:element name="JSONPRequest" nillable="true" type="tns:JsonpRequestType" />
+      <xs:element name="JSONPResponse" nillable="true" type="tns:JsonpResponseType" />
+      <xs:complexType name="JsonpRequestType">
+        <xs:all>
+          <xs:element name="Padding" type="xs:string" />
+          <xs:element name="JSON" type="tns:JsonRequestType" />
+        </xs:all>
+      </xs:complexType>
+      <xs:complexType name="JsonpResponseType">
+        <xs:all>
+          <xs:element name="Padding" type="xs:string" />
+          <xs:element name="JSON" type="tns:JsonResponseType" />
+        </xs:all>
+      </xs:complexType>
+      <xs:complexType name="JsonRequestType" abstract="true" />
+      <xs:complexType name="JsonResponseType" abstract="true" />
+    </xs:schema>
+    <xs:schema xmlns:vs="http://hp.com/SOAQ/ServiceVirtualization/2010/" xmlns:ns2="http://hp.com/SOAQ/ServiceVirtualization/2010/BINARY" xmlns:ns0="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP" xmlns:sv="http://hp.com/SOAQ/ServiceVirtualization/2010/SDL" xmlns:ns1="http://hp.com/SOAQ/ServiceVirtualization/2019/RESPONSE_OVERRIDE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" elementFormDefault="qualified" targetNamespace="http://hp.com/SOAQ/ServiceVirtualization/2019/RESPONSE_OVERRIDE">
+      <xs:element sv:ignore="True" sv:custom-metadata="true" name="Overrides">
+        <xs:complexType>
+          <xs:all>
+            <xs:element sv:ignore="True" minOccurs="0" name="ResponseDestination" type="xs:string" />
+            <xs:element sv:ignore="True" minOccurs="0" name="ResponseDelay" type="xs:int" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:vs="http://hp.com/SOAQ/ServiceVirtualization/2010/" xmlns:ns2="http://hp.com/SOAQ/ServiceVirtualization/2010/BINARY" xmlns:ns0="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP" xmlns:sv="http://hp.com/SOAQ/ServiceVirtualization/2010/SDL" xmlns:ns1="http://hp.com/SOAQ/ServiceVirtualization/2019/RESPONSE_OVERRIDE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP">
+      <xs:element name="HTTPInputParameters">
+        <xs:complexType>
+          <xs:all>
+            <xs:element sv:operation-discriminator="UriPath" name="UriPath" type="xs:string" />
+            <xs:element name="ClientAddress" type="xs:string" />
+            <xs:element sv:custom-metadata="true" minOccurs="0" name="Parameters">
+              <xs:complexType>
+                <xs:all>
+                  <xs:element name="call_id" type="xs:string" />
+                </xs:all>
+              </xs:complexType>
+            </xs:element>
+            <xs:element sv:custom-metadata="true" minOccurs="0" name="UnnamedParameters">
+              <xs:complexType>
+                <xs:all />
+              </xs:complexType>
+            </xs:element>
+            <xs:element sv:custom-metadata="true" sv:default-new-ignore="true" minOccurs="0" name="Headers">
+              <xs:complexType>
+                <xs:all>
+                  <xs:element sv:ignore="true" minOccurs="0" name="Connection" type="xs:string" />
+                  <xs:element sv:ignore="true" minOccurs="0" name="Host" type="xs:string" />
+                  <xs:element sv:ignore="true" minOccurs="0" name="Cookie" type="xs:string" />
+                  <xs:element sv:ignore="true" minOccurs="0" name="Content-Type" type="xs:string" />
+                  <xs:element sv:ignore="true" minOccurs="0" name="Accept" type="xs:string" />
+                  <xs:element sv:ignore="true" minOccurs="0" name="Accept-Encoding" type="xs:string" />
+                  <xs:element sv:ignore="true" minOccurs="0" name="Cache-Control" type="xs:string" />
+                  <xs:element sv:ignore="true" minOccurs="0" name="Expect" type="xs:string" />
+                  <xs:element sv:ignore="true" minOccurs="0" name="User-Agent" type="xs:string" />
+                </xs:all>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Method">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="DELETE" />
+                  <xs:enumeration value="GET" />
+                  <xs:enumeration value="HEAD" />
+                  <xs:enumeration value="OPTIONS" />
+                  <xs:enumeration value="POST" />
+                  <xs:enumeration value="PUT" />
+                  <xs:enumeration value="PATCH" />
+                  <xs:enumeration value="TRACE" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="Transport">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="HTTP" />
+                  <xs:enumeration value="HTTPS" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="HTTPOutputParameters">
+        <xs:complexType>
+          <xs:all>
+            <xs:element default="200" name="StatusCode">
+              <xs:simpleType>
+                <xs:restriction base="xs:int">
+                  <xs:minInclusive value="100" />
+                  <xs:maxInclusive value="599" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element sv:custom-metadata="true" minOccurs="0" name="Headers">
+              <xs:complexType>
+                <xs:all>
+                  <xs:element minOccurs="0" default="text/plain" name="Content-Type" type="xs:string" />
+                </xs:all>
+              </xs:complexType>
+            </xs:element>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </vs:schemata>
+  <vs:commonInput id="common-input">
+    <vs:part element="ns0:HTTPInputParameters" processor="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP" />
+  </vs:commonInput>
+  <vs:commonOutput id="common-output">
+    <vs:part element="ns1:Overrides" processor="http://hp.com/SOAQ/ServiceVirtualization/2019/RESPONSE_OVERRIDE" />
+    <vs:part element="ns0:HTTPOutputParameters" processor="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP" />
+  </vs:commonOutput>
+  <vs:operations>
+    <vs:operation id="any-uri-operation" name="**">
+      <vs:metadata name="OperationDiscriminators">
+        <vs:operationDiscriminators>
+          <vs:operationDiscriminator name="UriPath">**</vs:operationDiscriminator>
+        </vs:operationDiscriminators>
+      </vs:metadata>
+      <vs:input>
+        <vs:message id="empty" name="No content" />
+      </vs:input>
+      <vs:output>
+        <vs:message id="empty" name="No content" />
+        <vs:message id="b6344b9f-f2c2-4abc-a18f-f2f8c2fb28dd" name="BinaryContent">
+          <vs:part element="ns2:BinaryContent" processor="http://hp.com/SOAQ/ServiceVirtualization/2010/BINARY" />
+        </vs:message>
+      </vs:output>
+      <vs:dataMaskings />
+    </vs:operation>
+  </vs:operations>
+</vs:serviceDescription>

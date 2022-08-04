@@ -1,0 +1,16 @@
+<SuggestPortfolioStructure
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Purpose>Hedging</Purpose>
+  <RiskLevel>20</RiskLevel>
+  <IntendedInvestmentValue>
+    <Value>10000.00</Value>
+    <Currency>USD</Currency>
+  </IntendedInvestmentValue>
+  <Customer>
+    <Name>John</Name>
+    <Surname>Doe</Surname>
+    <Citizenship>Spain</Citizenship>
+    <CityOfResidence>Madrid</CityOfResidence>
+  </Customer>
+</SuggestPortfolioStructure>

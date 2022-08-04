@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ds version="5.5.0.6315" id="ef662383-1471-4907-85ea-ca766116b2b2" vsId="e01f4c17-19e5-4ef1-918d-1934eb9ec9e8" dmId="98c3329e-77d7-4d7b-b224-ab22a38d59b8" sorId="4d6fa7c5-8021-4223-a7aa-75eade9c285b" hc="-67942552" xmlns="http://hp.com/SOAQ/ServiceVirtualization/2010/">
+  <sc id="6dc96521-9ffc-47dc-85ef-21fba075d164" ts="2022-03-28T09:03:18.7752829Z" ri="1" rc="1" rr="false">
+    <ntId p="4:1">b6344b9f-f2c2-4abc-a18f-f2f8c2fb28dd</ntId>
+    <ntId p="6:1">empty</ntId>
+    <s p="8:1">200</s>
+    <s p="10:1">text/plain</s>
+    <ntId p="20:1">empty</ntId>
+    <ntId p="22:1">empty</ntId>
+    <b p="70:1"></b>
+    <s p="71:1">New Text Document.txt</s>
+    <s p="72:1">text/plain</s>
+  </sc>
+</ds>

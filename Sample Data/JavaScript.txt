@@ -1,0 +1,21 @@
+//hpsv.logger.error("This is a logged error");
+//hpsv.messageLogger.error("This is a problem list error");
+
+if(hpsv.response.PortfolioSuggestion) {
+    var assets = //TODO get assets array here from the Data Model
+    for (i = 0; i < assets.length; i++) {
+        var assetType = Math.floor(Math.random() * 4)%4;
+        if(assetType == 0) {
+            assets[i].Type = "Equity";
+        }
+        if(assetType == 1) {
+            assets[i].Type = "Bond";
+        }
+        if(assetType == 2) {
+            assets[i].Type = "ETF";
+        }
+        if(assetType == 3) {
+            assets[i].Type = "Commodity";
+        }
+    }
+}

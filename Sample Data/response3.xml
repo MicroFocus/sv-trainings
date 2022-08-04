@@ -1,0 +1,52 @@
+<PortfolioSuggestion
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <KYC>
+    <Name>John</Name>
+    <Surname>Doe</Surname>
+    <Citizenship>Spain</Citizenship>
+    <CityOfResidence>Madrid</CityOfResidence>
+    <UniqueIdentifier>042-86-9760</UniqueIdentifier>
+  </KYC>
+  <SuggestedAssets>
+    <Asset>
+      <ISIN>IE00B46G8275</ISIN>
+      <Name>HSBC MSCI Indonesia UCITS ETF</Name>
+      <Type>ETF</Type>
+      <Units>48.29</Units>
+      <PriceInUSD>51.77</PriceInUSD>
+      <RiskScore>40</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:42:57</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>US900123CG37</ISIN>
+      <Name>Turkei, Republik</Name>
+      <Type>Bond</Type>
+      <Units>28.66</Units>
+      <PriceInUSD>87.20</PriceInUSD>
+      <RiskScore>50</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:42:57</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>US4592001014</ISIN>
+      <Name>IBM Corp.</Name>
+      <Type>Equity</Type>
+      <Units>24.71</Units>
+      <PriceInUSD>101.15</PriceInUSD>
+      <RiskScore>20</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:42:57</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>US1912161007</ISIN>
+      <Name>Coca Cola Co.</Name>
+      <Type>Equity</Type>
+      <Units>60.1</Units>
+      <PriceInUSD>41.595</PriceInUSD>
+      <RiskScore>40</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:42:57</MarketQuoteTime>
+    </Asset>
+  </SuggestedAssets>
+  <TotalValueInUSD>10000</TotalValueInUSD>
+  <Hash>0E599A4AB5D92549AD02A93475ACD0DEE9D9AD79</Hash>
+  <TransactionId>24613778701165</TransactionId>
+</PortfolioSuggestion>

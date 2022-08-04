@@ -1,0 +1,24 @@
+using HP.SV.DotNetRuleApi;
+using HP.SV.CSharp;
+
+namespace HP.SV
+{
+    public class CSharpRule
+    {
+        public static void Execute(HpsvRootObject sv)
+        {
+            if(!sv.Response.IsNotPresent("PortfolioSuggestion"))
+            {
+                decimal total = 0;
+                var assets = //TODO get assets array here from the Data Model
+                foreach(var asset in assets)
+                {
+                    var price = decimal.Parse(asset.PriceInUSD);
+                    var units = decimal.Parse(asset.Units);
+                    total += price * units;
+                }
+                //TODO write to the TotalValueInUSD field here = total.ToString();
+            }
+        }
+    }
+}

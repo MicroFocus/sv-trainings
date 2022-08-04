@@ -1,0 +1,52 @@
+<PortfolioSuggestion
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <KYC>
+    <Name>John</Name>
+    <Surname>Doe</Surname>
+    <Citizenship>Spain</Citizenship>
+    <CityOfResidence>Madrid</CityOfResidence>
+    <UniqueIdentifier>042-86-9760</UniqueIdentifier>
+  </KYC>
+  <SuggestedAssets>
+    <Asset>
+      <ISIN>LU0444605306</ISIN>
+      <Name>ComStage PSI 20 Leverage UCITS ETF</Name>
+      <Type>ETF</Type>
+      <Units>726.95</Units>
+      <PriceInUSD>3.439</PriceInUSD>
+      <RiskScore>40</RiskScore>
+      <MarketQuoteTime>2020-09-29T09:12:54</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>US4592001014</ISIN>
+      <Name>IBM Corp.</Name>
+      <Type>Equity</Type>
+      <Units>24.71</Units>
+      <PriceInUSD>101.15</PriceInUSD>
+      <RiskScore>20</RiskScore>
+      <MarketQuoteTime>2020-09-29T09:12:54</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>LU2090062600</ISIN>
+      <Name>Lyxor Daily LevDAX UCITS ETF</Name>
+      <Type>ETF</Type>
+      <Units>253.85</Units>
+      <PriceInUSD>9.848</PriceInUSD>
+      <RiskScore>30</RiskScore>
+      <MarketQuoteTime>2020-09-29T09:12:54</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>DE0005933931</ISIN>
+      <Name>iShares Core DAX UCITS ETF</Name>
+      <Type>ETF</Type>
+      <Units>23.53</Units>
+      <PriceInUSD>106.24</PriceInUSD>
+      <RiskScore>30</RiskScore>
+      <MarketQuoteTime>2020-09-29T09:12:54</MarketQuoteTime>
+    </Asset>
+  </SuggestedAssets>
+  <TotalValueInUSD>10000</TotalValueInUSD>
+  <Hash>4F01BC9F4D457ABA324B1069C57B179E800DA2D2</Hash>
+  <TransactionId>24523742374782</TransactionId>
+</PortfolioSuggestion>

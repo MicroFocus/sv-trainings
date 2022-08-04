@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<vs:serviceDescription version="5.5.0.6493" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns0="http://hp.com/SOAQ/ServiceVirtualization/2019/SCA_REQUEST_OVERRIDE" xmlns:ns1="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP" xmlns:ns2="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP/ServiceCallActivity" xmlns:ns3="http://hp.com/SOAQ/ServiceVirtualization/2010/BINARY" id="d8d579d0-8718-409b-a3f3-28adcab25768" name="SCA Description" protocol="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP/REST" xmlns:vs="http://hp.com/SOAQ/ServiceVirtualization/2010/">
+  <vs:requestSessionIdLocator state="Set">
+    <vs:part node="xmlns(ns0=http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP)xpath(ns0:HTTPInputParameters)" type="xmlns(ns0=http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP)xpath(ns0:HTTPInputParameters/type::*)" />
+    <vs:part node="ClientAddress" type="xmlns(ns0=http://www.w3.org/2001/XMLSchema)xpath(type::ns0:string)" definingType="xmlns(ns0=http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP)xpath(ns0:HTTPInputParameters/type::*)" />
+  </vs:requestSessionIdLocator>
+  <vs:metadata name="SOAP:Address" type="xs:string" value="https://localhost:7205/suggestportfolio" />
+  <vs:metadata name="SCA:RequestAgent" type="xs:string" value="HTTP_e5c2b5e4-619f-41a8-b64b-6d7d54c6d94d" />
+  <vs:metadata name="SCA:RequestAgentName" type="xs:string" value="Training HTTPS Gateway" />
+  <vs:metadata name="SCA:ResponseAgent" type="xs:string" value="HTTP_e5c2b5e4-619f-41a8-b64b-6d7d54c6d94d" />
+  <vs:metadata name="SCA:ResponseAgentName" type="xs:string" value="Training HTTPS Gateway" />
+  <vs:schemata>
+    <xs:schema xmlns:vs="http://hp.com/SOAQ/ServiceVirtualization/2010/" xmlns:ns3="http://hp.com/SOAQ/ServiceVirtualization/2010/BINARY" xmlns:ns1="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP" xmlns:ns2="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP/ServiceCallActivity" xmlns:ns0="http://hp.com/SOAQ/ServiceVirtualization/2019/SCA_REQUEST_OVERRIDE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" elementFormDefault="qualified" targetNamespace="http://hp.com/SOAQ/ServiceVirtualization/2010/BINARY">
+      <xs:element name="BinaryContent" nillable="true">
+        <xs:complexType>
+          <xs:all>
+            <xs:element default="" name="Data" type="xs:base64Binary" />
+            <xs:element name="Filename" type="xs:string" />
+            <xs:element name="Mimetype" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:vs="http://hp.com/SOAQ/ServiceVirtualization/2010/" xmlns:ns3="http://hp.com/SOAQ/ServiceVirtualization/2010/BINARY" xmlns:ns1="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP" xmlns:ns2="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP/ServiceCallActivity" xmlns:tns="http://hp.com/SOAQ/ServiceVirtualization/2011/JSON/Types" xmlns:ns0="http://hp.com/SOAQ/ServiceVirtualization/2019/SCA_REQUEST_OVERRIDE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" elementFormDefault="qualified" targetNamespace="http://hp.com/SOAQ/ServiceVirtualization/2011/JSON/Types">
+      <xs:element name="JSONRequest" nillable="true" type="tns:JsonRequestType" />
+      <xs:element name="JSONResponse" nillable="true" type="tns:JsonResponseType" />
+      <xs:element name="JSONPRequest" nillable="true" type="tns:JsonpRequestType" />
+      <xs:element name="JSONPResponse" nillable="true" type="tns:JsonpResponseType" />
+      <xs:complexType name="JsonpRequestType">
+        <xs:all>
+          <xs:element name="Padding" type="xs:string" />
+          <xs:element name="JSON" type="tns:JsonRequestType" />
+        </xs:all>
+      </xs:complexType>
+      <xs:complexType name="JsonpResponseType">
+        <xs:all>
+          <xs:element name="Padding" type="xs:string" />
+          <xs:element name="JSON" type="tns:JsonResponseType" />
+        </xs:all>
+      </xs:complexType>
+      <xs:complexType name="JsonRequestType" abstract="true" />
+      <xs:complexType name="JsonResponseType" abstract="true" />
+    </xs:schema>
+    <xs:schema xmlns:vs="http://hp.com/SOAQ/ServiceVirtualization/2010/" xmlns:ns3="http://hp.com/SOAQ/ServiceVirtualization/2010/BINARY" xmlns:ns1="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP" xmlns:ns2="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP/ServiceCallActivity" xmlns:sv="http://hp.com/SOAQ/ServiceVirtualization/2010/SDL" xmlns:ns0="http://hp.com/SOAQ/ServiceVirtualization/2019/SCA_REQUEST_OVERRIDE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" elementFormDefault="qualified" targetNamespace="http://hp.com/SOAQ/ServiceVirtualization/2019/SCA_REQUEST_OVERRIDE">
+      <xs:element sv:ignore="True" sv:custom-metadata="true" name="Overrides">
+        <xs:complexType>
+          <xs:all>
+            <xs:element sv:ignore="True" minOccurs="0" name="RequestDestination" type="xs:string" />
+            <xs:element sv:ignore="True" minOccurs="0" name="RequestDelay" type="xs:int" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:vs="http://hp.com/SOAQ/ServiceVirtualization/2010/" xmlns:ns3="http://hp.com/SOAQ/ServiceVirtualization/2010/BINARY" xmlns:ns1="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP" xmlns:ns2="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP/ServiceCallActivity" xmlns:sv="http://hp.com/SOAQ/ServiceVirtualization/2010/SDL" xmlns:ns0="http://hp.com/SOAQ/ServiceVirtualization/2019/SCA_REQUEST_OVERRIDE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP">
+      <xs:element name="HTTPInputParameters">
+        <xs:complexType>
+          <xs:all>
+            <xs:element sv:operation-discriminator="UriPath" name="UriPath" type="xs:string" />
+            <xs:element name="ClientAddress" type="xs:string" />
+            <xs:element sv:custom-metadata="true" minOccurs="0" name="Parameters">
+              <xs:complexType>
+                <xs:all />
+              </xs:complexType>
+            </xs:element>
+            <xs:element sv:custom-metadata="true" minOccurs="0" name="UnnamedParameters">
+              <xs:complexType>
+                <xs:all />
+              </xs:complexType>
+            </xs:element>
+            <xs:element sv:custom-metadata="true" sv:default-new-ignore="true" minOccurs="0" name="Headers">
+              <xs:complexType>
+                <xs:all>
+                  <xs:element sv:ignore="true" minOccurs="0" name="Connection" type="xs:string" />
+                  <xs:element sv:ignore="true" minOccurs="0" name="Host" type="xs:string" />
+                  <xs:element sv:ignore="true" minOccurs="0" name="Cookie" type="xs:string" />
+                  <xs:element sv:ignore="false" minOccurs="0" name="Content-Type" type="xs:string" />
+                  <xs:element sv:ignore="false" minOccurs="0" name="Accept" type="xs:string" />
+                  <xs:element sv:ignore="true" minOccurs="0" name="Accept-Encoding" type="xs:string" />
+                  <xs:element sv:ignore="true" minOccurs="0" name="Cache-Control" type="xs:string" />
+                  <xs:element sv:ignore="true" minOccurs="0" name="Expect" type="xs:string" />
+                  <xs:element sv:ignore="true" minOccurs="0" name="User-Agent" type="xs:string" />
+                </xs:all>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Method">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="DELETE" />
+                  <xs:enumeration value="GET" />
+                  <xs:enumeration value="HEAD" />
+                  <xs:enumeration value="OPTIONS" />
+                  <xs:enumeration value="POST" />
+                  <xs:enumeration value="PUT" />
+                  <xs:enumeration value="PATCH" />
+                  <xs:enumeration value="TRACE" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="Transport">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="HTTP" />
+                  <xs:enumeration value="HTTPS" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="HTTPOutputParameters">
+        <xs:complexType>
+          <xs:all>
+            <xs:element default="200" name="StatusCode">
+              <xs:simpleType>
+                <xs:restriction base="xs:int">
+                  <xs:minInclusive value="100" />
+                  <xs:maxInclusive value="599" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element sv:custom-metadata="true" minOccurs="0" name="Headers">
+              <xs:complexType>
+                <xs:all>
+                  <xs:element minOccurs="0" default="text/plain" name="Content-Type" type="xs:string" />
+                </xs:all>
+              </xs:complexType>
+            </xs:element>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:vs="http://hp.com/SOAQ/ServiceVirtualization/2010/" xmlns:ns3="http://hp.com/SOAQ/ServiceVirtualization/2010/BINARY" xmlns:ns1="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP" xmlns:ns2="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP/ServiceCallActivity" xmlns:ns0="http://hp.com/SOAQ/ServiceVirtualization/2019/SCA_REQUEST_OVERRIDE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP/ServiceCallActivity">
+      <xs:element name="ServiceCallFailure">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="UNKNOWN" />
+            <xs:enumeration value="HOST_NOT_FOUND" />
+            <xs:enumeration value="CONNECTION_FAILED" />
+            <xs:enumeration value="CONNECTION_TIMEOUT" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:vs="http://hp.com/SOAQ/ServiceVirtualization/2010/" xmlns:ns3="http://hp.com/SOAQ/ServiceVirtualization/2010/BINARY" xmlns:ns1="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP" xmlns:ns2="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP/ServiceCallActivity" xmlns:sv="http://hp.com/SOAQ/ServiceVirtualization/2010/SDL" xmlns:ns0="http://hp.com/SOAQ/ServiceVirtualization/2019/SCA_REQUEST_OVERRIDE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" elementFormDefault="qualified">
+      <xs:element name="SuggestPortfolioStructure" type="SuggestPortfolioStructureType" />
+      <xs:complexType name="SuggestPortfolioStructureType">
+        <xs:sequence>
+          <xs:element form="unqualified" name="Purpose" type="xs:string" />
+          <xs:element form="unqualified" name="RiskLevel" type="xs:string" />
+          <xs:element form="unqualified" name="IntendedInvestmentValue" type="IntendedInvestmentValueType" />
+          <xs:element form="unqualified" name="Customer" type="CustomerType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="IntendedInvestmentValueType">
+        <xs:sequence>
+          <xs:element form="unqualified" name="Value" type="xs:string" />
+          <xs:element form="unqualified" name="Currency" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CustomerType">
+        <xs:sequence>
+          <xs:element form="unqualified" name="Name" type="xs:string" />
+          <xs:element form="unqualified" name="Surname" type="xs:string" />
+          <xs:element form="unqualified" name="Citizenship" type="xs:string" />
+          <xs:element form="unqualified" name="CityOfResidence" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="PortfolioSuggestion" type="PortfolioSuggestionType" />
+      <xs:complexType name="PortfolioSuggestionType">
+        <xs:sequence>
+          <xs:element form="unqualified" name="KYC" type="KYCType" />
+          <xs:element form="unqualified" name="SuggestedAssets" type="SuggestedAssetsType" />
+          <xs:element form="unqualified" name="TotalValueInUSD" type="xs:string" />
+          <xs:element form="unqualified" name="Hash" type="xs:string" />
+          <xs:element form="unqualified" name="TransactionId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="KYCType">
+        <xs:sequence>
+          <xs:element form="unqualified" name="Name" type="xs:string" />
+          <xs:element form="unqualified" name="Surname" type="xs:string" />
+          <xs:element form="unqualified" name="Citizenship" type="xs:string" />
+          <xs:element form="unqualified" name="CityOfResidence" type="xs:string" />
+          <xs:element form="unqualified" name="UniqueIdentifier" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SuggestedAssetsType">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" form="unqualified" name="Asset" nillable="true" type="AssetType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AssetType">
+        <xs:sequence sv:first="6">
+          <xs:element minOccurs="0" form="unqualified" name="ISIN" type="xs:string" />
+          <xs:element minOccurs="0" form="unqualified" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" form="unqualified" name="Type" type="xs:string" />
+          <xs:element minOccurs="0" form="unqualified" name="Units" type="xs:string" />
+          <xs:element minOccurs="0" form="unqualified" name="PriceInUSD" type="xs:string" />
+          <xs:element minOccurs="0" form="unqualified" name="RiskScore" type="xs:string" />
+          <xs:element form="unqualified" name="MarketQuoteTime" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Unsupported" type="UnsupportedType" />
+      <xs:complexType name="UnsupportedType">
+        <xs:sequence>
+          <xs:element form="unqualified" name="Message" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </vs:schemata>
+  <vs:commonInput id="common-input">
+    <vs:part element="ns0:Overrides" processor="http://hp.com/SOAQ/ServiceVirtualization/2019/SCA_REQUEST_OVERRIDE" />
+    <vs:part element="ns1:HTTPInputParameters" processor="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP" />
+  </vs:commonInput>
+  <vs:commonOutput id="common-output">
+    <vs:part element="ns1:HTTPOutputParameters" processor="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP" />
+  </vs:commonOutput>
+  <vs:operations>
+    <vs:operation id="any-uri-operation" name="**">
+      <vs:metadata name="OperationDiscriminators">
+        <vs:operationDiscriminators>
+          <vs:operationDiscriminator name="UriPath">**</vs:operationDiscriminator>
+        </vs:operationDiscriminators>
+      </vs:metadata>
+      <vs:input>
+        <vs:message id="empty" name="No content" />
+        <vs:message id="f47e3a7e-f10f-4805-b54c-9bbacc4a6899" name="SuggestPortfolioStructure">
+          <vs:part element="SuggestPortfolioStructure" processor="http://hp.com/SOAQ/ServiceVirtualization/2010/XML" />
+        </vs:message>
+      </vs:input>
+      <vs:output>
+        <vs:message id="empty" name="No content" />
+        <vs:message id="default-service-call-failure" name="Service Call Failure">
+          <vs:part element="ns2:ServiceCallFailure">
+            <vs:metadata name="ProtocolPartName" type="xs:string" value="http://hp.com/SOAQ/ServiceVirtualization/2010/HTTP/ServiceCallActivity" />
+          </vs:part>
+        </vs:message>
+        <vs:message id="df98846a-ac7d-4786-945d-63eb778d7db3" name="PortfolioSuggestion">
+          <vs:part element="PortfolioSuggestion" processor="http://hp.com/SOAQ/ServiceVirtualization/2010/XML" />
+        </vs:message>
+        <vs:message id="8b717049-94f8-4aa8-9349-e645955e50d4" name="Unsupported">
+          <vs:part element="Unsupported" processor="http://hp.com/SOAQ/ServiceVirtualization/2010/XML" />
+        </vs:message>
+        <vs:message id="08a3f036-1a1c-4b8c-97da-01c0cc280b32" name="BinaryContent">
+          <vs:part element="ns3:BinaryContent" processor="http://hp.com/SOAQ/ServiceVirtualization/2010/BINARY" />
+        </vs:message>
+      </vs:output>
+      <vs:dataMaskings />
+    </vs:operation>
+  </vs:operations>
+</vs:serviceDescription>

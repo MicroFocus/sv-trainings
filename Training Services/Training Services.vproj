@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{61CAF034-52DF-4FD6-8B54-47AE0EB31382}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ServerIdentifier>urn:Embedded Server</ServerIdentifier>
+    <ServerUrl />
+    <ProductVersion>3.0</ProductVersion>
+    <ProductEdition>Express</ProductEdition>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Checkup Data Model Dataset 001.vsdataset" />
+    <None Include="Checkup Data Model Dataset 002.vsdataset" />
+    <None Include="Checkup Data Model Dataset 003.vsdataset" />
+    <None Include="Checkup Data Model Dataset.vsdataset" />
+    <None Include="Checkup Data Model.vsmodel" />
+    <None Include="Checkup Service Description.vsdsc" />
+    <None Include="Checkup Service Limited Performance Model.vspfmodel" />
+    <None Include="Checkup Service Offline Performance.vspfmodel" />
+    <None Include="Checkup Service Performance Model.vspfmodel" />
+    <None Include="Checkup Service.vs" />
+    <None Include="Checkup Service.vsmf" />
+    <None Include="Dashboard Data Model Dataset 001.vsdataset" />
+    <None Include="Dashboard Data Model Dataset 002.vsdataset" />
+    <None Include="Dashboard Data Model Dataset 003.vsdataset" />
+    <None Include="Dashboard Data Model Dataset 004.vsdataset" />
+    <None Include="Dashboard Data Model Dataset 005.vsdataset" />
+    <None Include="Dashboard Data Model Dataset 006.vsdataset" />
+    <None Include="Dashboard Data Model Dataset.vsdataset" />
+    <None Include="Dashboard Data Model.vsmodel" />
+    <None Include="Dashboard Service Description.vsdsc" />
+    <None Include="Dashboard Service Limited Performance Model.vspfmodel" />
+    <None Include="Dashboard Service Offline Performance.vspfmodel" />
+    <None Include="Dashboard Service Performance Model.vspfmodel" />
+    <None Include="Dashboard Service.vs" />
+    <None Include="Dashboard Service.vsmf" />
+    <None Include="SCA Description.vsdsc" />
+  </ItemGroup>
+</Project>

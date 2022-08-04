@@ -1,0 +1,61 @@
+<PortfolioSuggestion
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <KYC>
+    <Name>John</Name>
+    <Surname>Doe</Surname>
+    <Citizenship>Spain</Citizenship>
+    <CityOfResidence>Madrid</CityOfResidence>
+    <UniqueIdentifier>042-86-9760</UniqueIdentifier>
+  </KYC>
+  <SuggestedAssets>
+    <Asset>
+      <ISIN>LU0274211480</ISIN>
+      <Name>Xtrackers DAX UCITS ETF 1C</Name>
+      <Type>ETF</Type>
+      <Units>8.35</Units>
+      <PriceInUSD>119.68</PriceInUSD>
+      <RiskScore>35</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:47:45</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>LU0213956849</ISIN>
+      <Name>HSBC GIF Euroland Growth</Name>
+      <Type>Funds</Type>
+      <Units>40</Units>
+      <PriceInUSD>25.00</PriceInUSD>
+      <RiskScore>40</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:47:45</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>DE0006791825</ISIN>
+      <Name>LEADING CITIES INVEST</Name>
+      <Type>Funds</Type>
+      <Units>9.43</Units>
+      <PriceInUSD>106.00</PriceInUSD>
+      <RiskScore>40</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:47:45</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>XS1492818866</ISIN>
+      <Name>European Investment Bank (EIB)</Name>
+      <Type>Bond</Type>
+      <Units>9.06</Units>
+      <PriceInUSD>110.29</PriceInUSD>
+      <RiskScore>7</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:47:45</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>US92826C8394</ISIN>
+      <Name>VISA Inc.</Name>
+      <Type>Equity</Type>
+      <Units>5.95</Units>
+      <PriceInUSD>168.00</PriceInUSD>
+      <RiskScore>25</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:47:45</MarketQuoteTime>
+    </Asset>
+  </SuggestedAssets>
+  <TotalValueInUSD>5000</TotalValueInUSD>
+  <Hash>CBF259FC9D3A966FD516EE99261988863FC3264B</Hash>
+  <TransactionId>24616651903891</TransactionId>
+</PortfolioSuggestion>

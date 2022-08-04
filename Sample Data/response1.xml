@@ -1,0 +1,52 @@
+<PortfolioSuggestion
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <KYC>
+    <Name>John</Name>
+    <Surname>Doe</Surname>
+    <Citizenship>Spain</Citizenship>
+    <CityOfResidence>Madrid</CityOfResidence>
+    <UniqueIdentifier>042-86-9760</UniqueIdentifier>
+  </KYC>
+  <SuggestedAssets>
+    <Asset>
+      <ISIN>DE0001135275</ISIN>
+      <Name>Deutschland, Bundesrepublik</Name>
+      <Type>Bond</Type>
+      <Units>14.44</Units>
+      <PriceInUSD>173.10</PriceInUSD>
+      <RiskScore>2</RiskScore>
+      <MarketQuoteTime>2020-09-29T08:57:09</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>XC0009655157</ISIN>
+      <Name>Gold</Name>
+      <Type>Commodity</Type>
+      <Units>1.34</Units>
+      <PriceInUSD>1863.4448</PriceInUSD>
+      <RiskScore>3</RiskScore>
+      <MarketQuoteTime>2020-09-29T08:57:09</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>US4592001014</ISIN>
+      <Name>IBM Corp.</Name>
+      <Type>Equity</Type>
+      <Units>24.71</Units>
+      <PriceInUSD>101.15</PriceInUSD>
+      <RiskScore>20</RiskScore>
+      <MarketQuoteTime>2020-09-29T08:57:09</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>US5949181045</ISIN>
+      <Name>Microsoft Corp.</Name>
+      <Type>Equity</Type>
+      <Units>14.13</Units>
+      <PriceInUSD>176.88</PriceInUSD>
+      <RiskScore>10</RiskScore>
+      <MarketQuoteTime>2020-09-29T08:57:09</MarketQuoteTime>
+    </Asset>
+  </SuggestedAssets>
+  <TotalValueInUSD>10000</TotalValueInUSD>
+  <Hash>C6F5F029BBCE474322DBDDA7153EFF6C5DFC29AA</Hash>
+  <TransactionId>24514291737385</TransactionId>
+</PortfolioSuggestion>

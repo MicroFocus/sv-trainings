@@ -1,0 +1,52 @@
+<PortfolioSuggestion
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <KYC>
+    <Name>John</Name>
+    <Surname>Doe</Surname>
+    <Citizenship>Spain</Citizenship>
+    <CityOfResidence>Madrid</CityOfResidence>
+    <UniqueIdentifier>042-86-9760</UniqueIdentifier>
+  </KYC>
+  <SuggestedAssets>
+    <Asset>
+      <ISIN>XC000A0AEZK8</ISIN>
+      <Name>Cotton</Name>
+      <Type>Commodity</Type>
+      <Units>18.92</Units>
+      <PriceInUSD>66.0456</PriceInUSD>
+      <RiskScore>25</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:50:06</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>XS1972547696</ISIN>
+      <Name>VOLKSWAGEN FINANCIAL SERVICES AG</Name>
+      <Type>Bond</Type>
+      <Units>11.54</Units>
+      <PriceInUSD>108.23</PriceInUSD>
+      <RiskScore>20</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:50:06</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>DE0001135275</ISIN>
+      <Name>Deutschland, Bundesrepublik</Name>
+      <Type>Bond</Type>
+      <Units>7.22</Units>
+      <PriceInUSD>173.10</PriceInUSD>
+      <RiskScore>2</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:50:06</MarketQuoteTime>
+    </Asset>
+    <Asset>
+      <ISIN>XC0009677409</ISIN>
+      <Name>Brent Crude</Name>
+      <Type>Commodity</Type>
+      <Units>29.59</Units>
+      <PriceInUSD>42.231</PriceInUSD>
+      <RiskScore>75</RiskScore>
+      <MarketQuoteTime>2020-09-29T11:50:06</MarketQuoteTime>
+    </Asset>
+  </SuggestedAssets>
+  <TotalValueInUSD>5000</TotalValueInUSD>
+  <Hash>9AE24F26CA1674E887AC9ADF32E6E907D6760990</Hash>
+  <TransactionId>24618060674277</TransactionId>
+</PortfolioSuggestion>
