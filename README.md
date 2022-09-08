@@ -93,4 +93,4 @@ You can use the following [YouTube playlist](https://www.youtube.com/playlist?li
 - Usual use cases
 - Hybrid simulation explained
 - Final check of your Virtual Service
-- How to get certified by SV R&D
+- How to get certified

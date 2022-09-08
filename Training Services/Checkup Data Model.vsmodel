@@ -582,6 +582,27 @@ namespace HP.SV
     {
         private const string SuccessResponseString = "OK";
         private static readonly string[] AllAssetTypes = new[] {"Equity","Commodity","Funds","ETF","Bond"};
+        private static System.Globalization.CultureInfo UsCultureInfo = new System.Globalization.CultureInfo("en-US");
+
+        private static bool tryParseDateTime(string s, out DateTime result)
+        {
+            return DateTime.TryParse(s, UsCultureInfo, System.Globalization.DateTimeStyles.AssumeUniversal, out result);
+        }
+
+        private static bool tryParseFloat(string s, out float result)
+        {
+            return float.TryParse(s, System.Globalization.NumberStyles.Any, UsCultureInfo, out result);
+        }
+
+        private static bool tryParseDecimal(string s, out decimal result)
+        {
+            return decimal.TryParse(s, System.Globalization.NumberStyles.Any, UsCultureInfo, out result);
+        }
+
+        private static decimal parseDecimal(string s)
+        {
+            return decimal.Parse(s, System.Globalization.NumberStyles.Any, UsCultureInfo);
+        }
 
         private static void Throw(string message)
         {
@@ -752,7 +773,7 @@ namespace HP.SV
                 Throw($@"Asset count should be 50, yet it is {response.SuggestedAssets.Asset.Count}");
             }
 
-            var incorrectMarketQuoteTime = response.SuggestedAssets.Asset.Where(a =&gt; a == null || !DateTime.TryParse(a.MarketQuoteTime, out var time) || (int)(DateTime.UtcNow - time).TotalMinutes &gt; 11 || (int)(DateTime.UtcNow - time).TotalMinutes &lt; 9).ToList();
+            var incorrectMarketQuoteTime = response.SuggestedAssets.Asset.Where(a =&gt; a == null || !tryParseDateTime(a.MarketQuoteTime, out var time) || (int)(DateTime.UtcNow - time).TotalMinutes &gt; 11 || (int)(DateTime.UtcNow - time).TotalMinutes &lt; 9).ToList();
             if (incorrectMarketQuoteTime.Any())
             {
                 Throw($@"Some assets don't have the MarketQuoteTime field 10 minutes in the past (one of the incorrect values is {(incorrectMarketQuoteTime.First()?.MarketQuoteTime ?? "none")}).");
@@ -773,13 +794,13 @@ namespace HP.SV
             }
 
             var units = representativeAsset.Units;
-            if (units == null || !float.TryParse(units, out _) || !units.Contains("."))
+            if (units == null || !tryParseFloat(units, out _) || !units.Contains("."))
             {
                 Throw($@"Some of the randomly generated asset Units values are not in the required format, which looks like e.g. 12.34 (one of the incorrect values is '{units}')");
             }
 
             var price = representativeAsset.Units;
-            if (price == null || !float.TryParse(price, out _) || !price.Contains("."))
+            if (price == null || !tryParseFloat(price, out _) || !price.Contains("."))
             {
                 Throw($@"Some of the randomly generated asset PriceInUSD values are not in the required format, which looks like e.g. 123.00 (one of the incorrect values is '{price}')");
             }
@@ -985,12 +1006,12 @@ namespace HP.SV
 
                             foreach (var asset in response.SuggestedAssets.Asset)
                             {
-                                var price = decimal.Parse(asset.PriceInUSD);
-                                var units = decimal.Parse(asset.Units);
+                                var price = parseDecimal(asset.PriceInUSD);
+                                var units = parseDecimal(asset.Units);
                                 total += price * units;
                             }
 
-                            if (!decimal.TryParse(response.TotalValueInUSD, out var responseTotal) || responseTotal != total)
+                            if (!tryParseDecimal(response.TotalValueInUSD, out var responseTotal) || responseTotal != total)
                             {
                                 Throw($@"The TotalValueInUSD value should be equal to {total}, rather than {response.TotalValueInUSD}.");
                             }

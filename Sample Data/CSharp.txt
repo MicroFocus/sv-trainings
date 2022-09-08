@@ -5,6 +5,13 @@ namespace HP.SV
 {
     public class CSharpRule
     {
+        private static System.Globalization.CultureInfo UsCultureInfo = new System.Globalization.CultureInfo("en-US");
+
+        private static decimal parseDecimal(string s)
+        {
+            return decimal.Parse(s, System.Globalization.NumberStyles.Any, UsCultureInfo);
+        }
+
         public static void Execute(HpsvRootObject sv)
         {
             if(!sv.Response.IsNotPresent("PortfolioSuggestion"))
@@ -13,8 +20,8 @@ namespace HP.SV
                 var assets = //TODO get assets array here from the Data Model
                 foreach(var asset in assets)
                 {
-                    var price = decimal.Parse(asset.PriceInUSD);
-                    var units = decimal.Parse(asset.Units);
+                    var price = parseDecimal(asset.PriceInUSD);
+                    var units = parseDecimal(asset.Units);
                     total += price * units;
                 }
                 //TODO write to the TotalValueInUSD field here = total.ToString();

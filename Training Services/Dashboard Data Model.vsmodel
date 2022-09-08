@@ -1458,6 +1458,18 @@ namespace HP.SV
                 }
         };
 
+        private static System.Globalization.CultureInfo UsCultureInfo = new System.Globalization.CultureInfo("en-US");
+
+        private static bool tryParseFloat(string s, out float result)
+        {
+            return float.TryParse(s, System.Globalization.NumberStyles.Any, UsCultureInfo, out result);
+        }
+
+        private static float parseFloat(string s)
+        {
+            return float.Parse(s, System.Globalization.NumberStyles.Any, UsCultureInfo);
+        }
+
         public static string Base64Encode(string plainText)
         {
             var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
@@ -1596,8 +1608,8 @@ namespace HP.SV
                     throw new Exception("Unsupported currency. Only USD is supported at this moment of development.");
                 }
 
-                if (float.TryParse(request.IntendedInvestmentValue?.Value ?? string.Empty, out var investmentValue) &amp;&amp;
-                   float.TryParse(request.RiskLevel ?? string.Empty, out var riskLevel))
+                if (tryParseFloat(request.IntendedInvestmentValue?.Value ?? string.Empty, out var investmentValue) &amp;&amp;
+                   tryParseFloat(request.RiskLevel ?? string.Empty, out var riskLevel))
                 {
                     if ((request.Purpose ?? string.Empty).ToLower() == "hedge" &amp;&amp; riskLevel &gt; 30)
                     {
@@ -1605,7 +1617,7 @@ namespace HP.SV
                     }
 
                     int count = random.Next(4, 7);
-                    var safeAssets = Assets.Where(a =&gt; float.Parse(a.RiskScore) &lt;= riskLevel).Select(cloneAsset).ToList();
+                    var safeAssets = Assets.Where(a =&gt; parseFloat(a.RiskScore) &lt;= riskLevel).Select(cloneAsset).ToList();
 
                     var selectedAssets = new List&lt;AssetType&gt;();
                     for (int i = 0; i &lt; count; i++)
@@ -1624,13 +1636,13 @@ namespace HP.SV
 
                     for (int i = 0; i &lt; selectedAssets.Count; i++)
                     {
-                        selectedAssets[i].Units = RoundDown(valuePerAsset / float.Parse(selectedAssets[i].PriceInUSD), 2).ToString();
+                        selectedAssets[i].Units = RoundDown(valuePerAsset / parseFloat(selectedAssets[i].PriceInUSD), 2).ToString();
                     }
 
                     response.TotalValueInUSD = investmentValue.ToString();
                     response.SuggestedAssets = new SuggestedAssetsType();
                     response.SuggestedAssets.Asset = new Asset();
-                    selectedAssets.Where(a =&gt; float.Parse(a.Units) &gt;= 0).ToList().ForEach(i =&gt; response.SuggestedAssets.Asset.Add(i));
+                    selectedAssets.Where(a =&gt; parseFloat(a.Units) &gt;= 0).ToList().ForEach(i =&gt; response.SuggestedAssets.Asset.Add(i));
                 }
             }
             catch (Exception e)
