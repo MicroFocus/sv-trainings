@@ -1608,6 +1608,10 @@ namespace HP.SV
                     throw new Exception("Unsupported currency. Only USD is supported at this moment of development.");
                 }
 
+                response.TotalValueInUSD = "0.00";
+                response.SuggestedAssets = new SuggestedAssetsType();
+                response.SuggestedAssets.Asset = new Asset();
+
                 if (tryParseFloat(request.IntendedInvestmentValue?.Value ?? string.Empty, out var investmentValue) &amp;&amp;
                    tryParseFloat(request.RiskLevel ?? string.Empty, out var riskLevel))
                 {
@@ -1640,8 +1644,6 @@ namespace HP.SV
                     }
 
                     response.TotalValueInUSD = investmentValue.ToString();
-                    response.SuggestedAssets = new SuggestedAssetsType();
-                    response.SuggestedAssets.Asset = new Asset();
                     selectedAssets.Where(a =&gt; parseFloat(a.Units) &gt;= 0).ToList().ForEach(i =&gt; response.SuggestedAssets.Asset.Add(i));
                 }
             }
