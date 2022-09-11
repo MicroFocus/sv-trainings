@@ -586,7 +586,7 @@ namespace HP.SV
 
         private static bool tryParseDateTime(string s, out DateTime result)
         {
-            return DateTime.TryParse(s, UsCultureInfo, System.Globalization.DateTimeStyles.AssumeUniversal, out result);
+            return DateTime.TryParse(s, UsCultureInfo, System.Globalization.DateTimeStyles.AdjustToUniversal, out result);
         }
 
         private static bool tryParseFloat(string s, out float result)
