@@ -10,7 +10,7 @@ Welcome to the home page of the ultimate SV self-paced data modeling training.
 2) Download PDF with [Hands-On Instructions](https://github.com/MicroFocus/sv-trainings/raw/main/Resources/SV%20Training%20-%20Hands%20On%202022.pdf) to follow.
 3) Download [training resources and sample messages](https://github.com/MicroFocus/sv-trainings/raw/main/Resources/Training.zip).
 4) Start watching the videos below, beginning with the first one.
-5) You will also need a REST API client to invoke your services. Use your favorite one, or [search the web and install one](https://www.google.com/search?q=rest+api+client).
+5) You will also need a REST API client to invoke services. Use your favorite one, or [search the web and install one](https://www.google.com/search?q=rest+api+client).
 
 ## Training YouTube playlist
 You can use the following [YouTube playlist](https://www.youtube.com/playlist?list=PLLkt3dLab1_Wu_Q_IatdF5fmE80vYsCAl).
