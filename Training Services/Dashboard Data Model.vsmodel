@@ -1630,7 +1630,7 @@ namespace HP.SV
                         {
                             int index = random.Next() % safeAssets.Count;
                             var a = safeAssets[index];
-                            a.MarketQuoteTime = DateTime.Now.ToString("s");
+                            a.MarketQuoteTime = DateTime.UtcNow.ToString("s");
                             selectedAssets.Add(a);
                             safeAssets.RemoveAt(index);
                         }

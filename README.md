@@ -6,7 +6,7 @@ Welcome to the home page of the ultimate SV self-paced data modeling training.
 ![How it works](Resources/how-it-works.png)
 
 ## How to begin
-1) Download and install the SV Designer 2022 as described step by step in the [install guide](/Install%20SV%20Designer.md).
+1) Download and install the SV Designer 2022 (or later) as described step by step in the [install guide](/Install%20SV%20Designer.md).
 2) Download PDF with [Hands-On Instructions](https://github.com/MicroFocus/sv-trainings/raw/main/Resources/SV%20Training%20-%20Hands%20On%202022.pdf) to follow.
 3) Download [training resources and sample messages](https://github.com/MicroFocus/sv-trainings/raw/main/Resources/Training.zip).
 4) Start watching the videos below, beginning with the first one.

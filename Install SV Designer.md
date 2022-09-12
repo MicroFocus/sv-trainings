@@ -12,7 +12,7 @@ The Express Edition is free and supports the full functionality, just its perfor
 
 _You have to create an account first in the Micro Focus Marketplace, providing just some very basic info.
 Then you can download the installer exe. Please scroll down in the Marketplace portal to see the
-"**Service Virtualization Express 2022**" download button._
+"**Service Virtualization Express 2022**" download button. You can also download any later version, if available._
 
 ![Downloading SV Designer](Resources/inst-svdesigner-download.png)
 
