@@ -24,7 +24,7 @@ namespace HP.SV
                     var units = parseDecimal(asset.Units);
                     total += price * units;
                 }
-                //TODO write to the TotalValueInUSD field here = total.ToString();
+                //TODO write to the TotalValueInUSD field here = total.ToString(UsCultureInfo);
             }
         }
     }
