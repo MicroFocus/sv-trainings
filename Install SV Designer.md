@@ -2,7 +2,7 @@
 
 Please, follow the steps below to install the free version of the SV Designer.
 
-## Downloading SV Designer 2022 Installer
+## Downloading SV Designer 2022 R1 Installer (or newer)
 
 Use the following link to download the SV Designer Express Edition Installer:
 
@@ -12,7 +12,7 @@ The Express Edition is free and supports the full functionality, just its perfor
 
 _You have to create an account first in the Micro Focus Marketplace, providing just some very basic info.
 Then you can download the installer exe. Please scroll down in the Marketplace portal to see the
-"**Service Virtualization Express 2022**" download button. You can also download any later version, if available._
+"**Service Virtualization Express 2022 R1**" (or newer) download button. You can also download any later version, if available._
 
 ![Downloading SV Designer](Resources/inst-svdesigner-download.png)
 
@@ -20,7 +20,7 @@ Then you can download the installer exe. Please scroll down in the Marketplace p
 
 ### STEP 1
 
-After you have downloaded **SV\_Designer\_2022\_Installer.exe**, please run it and start the installation.
+After you have downloaded **SV\_Designer\_2022.01\_Installer.exe**, please run it and start the installation.
 
 ![Step 1](Resources/inst-svdesigner-step-01.png)
 
